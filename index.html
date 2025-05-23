@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyAll - Partage de documents</title>
+    <link rel="stylesheet" href="css/home.css">
+    
+</head>
+<body>
+    <header>
+             <img src="drapeau1.jpg" alt="Logo">
+             <h1>StudyAll</h1>
+             <div class="header-school">
+                <img src="school.png" alt="ecole" class="school">
+             </div>
+             
+    </header>
+    <div id="modal-modules" class="modal" style="display:none;">
+        <div class="modal-content">
+                <span class="close" onclick="fermerModule()">&times;</span>
+                <h2 id="modal-titre"></h2>
+                <ul id="modal-liste"></ul>
+                <div id="modal-date"></div>
+        </div>
+    </div>
+    <div class="page-main">
+            <div class="texts">
+                <div class="text-enter">
+                     <h1>Apprenons ensembles</h1>
+                     
+                </div>
+                <div class="image-text">
+                      <img src="LOGOsupm.png" alt="SUPMTI Image">
+                </div>
+                <div class="text-enter-op">
+                        <p1>Bienvenue sur StudyAll La plateforme dédiée aux étudiants de SupMTI pour réussir leurs études !
+                            Accédez facilement à des cours, exercices, résumés et examens pour les filières ISI et ME.
+                            Préparez vos évaluations en toute confiance, à tout moment.
+                        </p1>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher des cours, des TD , des sujets d'Examen ...">
+                <button>Rechercher</button>
+            </div>
+            <div class="filtre">
+                <button onclick="filtrer('all')">TOUT</button>
+                <button onclick="filtrer('ME')">ME</button>
+                <button onclick="filtrer('ISI')">ISI</button>
+            </div>
+            <div class="documents">
+                <!-- Filière ME -->
+                <div class="filiere">
+
+                    <div class="bloc" data-filiere="ME">
+                        <h2>Filière ME</h2>
+                        <h3>L1</h3>
+                        <ul>
+                            <li><strong>Maths :</strong> <a href="#">Cours</a> | <a href="#">TD</a> | <a href="#">Sujets</a></li>
+                            <li><strong>Français :</strong> <a href="#">Cours</a> | <a href="#">TD</a></li>
+                            <li><strong>Langage C :</strong> <a href="#">Cours</a> | <a href="#">TD</a></li>
+                        </ul>
+                            <div class="mode-click"><button onclick="ouvrirModule('ME', 'L1')">Voir modules</button></div>
+                    </div>
+                    <div class="bloc" data-filiere="ME">
+                        <h3>L2</h3>
+                        <ul>
+                            <li><strong>Maths :</strong> <a href="#">Cours</a> | <a href="#">TD</a></li>
+                            <li><strong>Python :</strong> <a href="#">Cours</a> | <a href="#">TD</a></li>
+                        </ul>
+                            <div class="mode-click"><button onclick="ouvrirModule('ME', 'L2')">Voir modules</button></div>
+                    </div>
+                    <div class="bloc" data-filiere="ME">
+                        <h3>L3</h3>
+                        <ul>
+                            <li><strong>Maths :</strong> <a href="#">Cours</a></li>
+                            <li><strong>Français :</strong> <a href="#">Cours</a></li>
+                        </ul>
+                        <div class="mode-click"><button onclick="ouvrirModule('ME', 'L3')">Voir modules</button></div>
+                    </div>
+                </div>
+                <!-- Filière ISI -->
+                <div class="filiere">
+                    
+                    <div class="bloc" data-filiere="ISI">
+                        <h2>Filière ISI</h2>
+                        <h3>L1</h3>
+                        <ul>
+                            <li><strong>Maths :</strong> <a href="#">Cours</a> | <a href="#">TD</a></li>
+                            <li><strong>Python :</strong> <a href="#">Cours</a></li>
+                        </ul>
+                        <div class="mode-click"><button onclick="ouvrirModule('ISI', 'L2')">Voir modules</button></div>
+                    </div>
+                    <div class="bloc" data-filiere="ISI">
+                        <h3>L2</h3>
+                        <ul>
+                            <li><strong>Langage C :</strong> <a href="#">Cours</a> | <a href="#">TD</a></li>
+                            <li><strong>Français :</strong> <a href="#">Cours</a></li>
+                        </ul>
+                        <div class="mode-click"><button onclick="ouvrirModule('ISI', 'L2')">Voir modules</button></div>
+                    </div>
+                    <div class="bloc" data-filiere="ISI">
+                        <h3>L3</h3>
+                        <ul>
+                            <li><strong>Maths :</strong> <a href="#">Cours</a></li>
+                            <li><strong>Python :</strong> <a href="#">Cours</a></li>
+                        </ul>
+                        <div class="mode-click"><button onclick="ouvrirModule('ISI', 'L3')">Voir modules</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="last">
+                <div class="last-one">
+                        <img src="planet.png" alt="planet" class="last-image">
+                        <span class="last-text">Maroc</span>
+                </div>
+                <div class="last-pass">
+                    <img src="localisation.png" alt="localisation" class="last-local">
+                    <span class="last-p">Maroc</span>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="sup.jpg" alt="Logo-supmt">
+                
+            </div>
+            <div class="mode">
+                <p1 class="mode-p">SUPMTI : Notre point de départ, pas notre limite</p1>
+                
+            </div>
+            <div class="commentaires" id="commentaires">
+                    <h1 class="title-category">Commentaire</h1>
+                    <div class="commentaire">
+                         <img src="mess.jpg" class="commentaire-pp">
+                        <div class="commentaire-text">
+                             <h3 class="commentaire-nom">Jean Dupont</h3>
+                             <p class="commentaire-message">Enfin une plateforme claire et adaptée a SUPMTI. Merci pour cette initiative!!!!"2é année de ME"</p>
+
+                        </div>
+                    </div>
+                    <div class="commentaire">
+                         <img src="mess.jpg" class="commentaire-pp">
+                         <div class="commentaire-text">
+                              <h3 class="commentaire-nom">Aristid Mariop</h3>
+                              <p class="commentaire-message">Grace a StudyAll, j'ai pu révise mes cours d'ISI plus facilement. Les exercices corrigés m'ont beaucoup aidé!!!"1ére année d'isi"</p>
+                          </div>
+                    </div>
+                    <div class="commentaire">
+                         <img src="mess.jpg"  class="commentaire-pp">
+                         <div class="commentaire-text">
+                             <h3 class="commentaire-nom">Dopeur Hivore</h3>
+                              <p class="commentaire-message">interface simple et efficace. J'ai trouvé tout ce dont j'avais besoin pour mes révisions. Bravo à l'équipe de StudyAll!"2é année de ME"</p>
+                                
+                         </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+                <script>
+                        function filtrer(filiere) {
+                            const blocs = document.querySelectorAll('.bloc');
+                            blocs.forEach(bloc => {
+                                if (filiere === 'all' || bloc.dataset.filiere === filiere) {
+                                    bloc.style.display = 'block';
+                                } else {
+                                    bloc.style.display = 'none';
+                                }
+                            });
+                        }
+                        
+                </script>
+                <script>
+                        const modulesData = {
+                            'ME': {
+                                'L1': {
+                                    modules: [
+                                        { nom: 'Maths', date: '12/06/2025' },
+                                        { nom: 'Français', date: '15/06/2025' },
+                                        { nom: 'Langage C', date: '18/06/2025' }
+                                    ]
+                                },
+                                'L2': {
+                                    modules: [
+                                        { nom: 'Maths', date: '10/06/2025' },
+                                        { nom: 'Python', date: '13/06/2025' }
+                                    ]
+                                },
+                                'L3': {
+                                    modules: [
+                                        { nom: 'Maths', date: '08/06/2025' },
+                                        { nom: 'Français', date: '11/06/2025' }
+                                    ]
+                                }
+                            },
+                            'ISI': {
+                                'L1': {
+                                    modules: [
+                                        { nom: 'Maths', date: '14/06/2025' },
+                                        { nom: 'Python', date: '17/06/2025' }
+                                    ]
+                                },
+                                'L2': {
+                                    modules: [
+                                        { nom: 'Langage C', date: '09/06/2025' },
+                                        { nom: 'Français', date: '12/06/2025' }
+                                    ]
+                                },
+                                'L3': {
+                                    modules: [
+                                        { nom: 'Maths', date: '07/06/2025' },
+                                        { nom: 'Python', date: '10/06/2025' }
+                                    ]
+                                }
+                            }
+                        };
+
+                        function ouvrirModule(filiere, niveau) {
+                            const modal = document.getElementById('modal-modules');
+                            const titre = document.getElementById('modal-titre');
+                            const liste = document.getElementById('modal-liste');
+                            const data = modulesData[filiere][niveau];
+                            titre.textContent = `Modules ${filiere} - ${niveau}`;
+                            liste.innerHTML = '';
+                            data.modules.forEach(mod => {
+                                const li = document.createElement('li');
+                                li.textContent = `${mod.nom} (Examen : ${mod.date})`;
+                                liste.appendChild(li);
+                            });
+                            modal.style.display = 'block';
+                        }
+                        function fermerModule() {
+                            document.getElementById('modal-modules').style.display = 'none';
+                        }
+                        window.onclick = function(event) {
+                            const modal = document.getElementById('modal-modules');
+                            if (event.target === modal) {
+                                fermerModule();
+                            }
+                        }
+                </script>
+    </div>
+    <div class="footer">
+        <p>StudyAll est une plateforme de partage de documents pour les étudiants de SupMTI.</p>
+        <p>© 2025 StudyAll. Tous droits réservés.</p>
+        <p>Contact :+212 663 66 08 95 h4ck-pi </p>
+        <div class="footer-image">
+            <img src="fec.jpeg" alt="feceboock" class="fec">
+            <img src="téléch.jpeg" alt="instagram" class="insta">
+            <img src="télé.png" alt="twiter" class="twiter">
+            <img src="link.png" alt="linkedin" class="link">
+        </div>
+    </div>
+   
+</body>
+</html>
