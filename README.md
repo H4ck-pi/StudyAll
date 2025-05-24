@@ -16,7 +16,8 @@ StudyAll est une plateforme de révision en ligne destinée aux étudiants de Su
 ## Aperçu
 
 
-https://github.com/user-attachments/assets/5e295689-347e-4fad-b9c4-ccf8fecd25e9
+
+Uploading Enregistrement 2025-05-24 024057.mp4…
 
 
 
