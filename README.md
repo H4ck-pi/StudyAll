@@ -1,9 +1,6 @@
-
-
-
 # StudyAll
 
-*StudyAll* est une plateforme de révision en ligne destinée aux étudiants de SupMTI. Elle regroupe des documents essentiels (cours, TD, TP, examens) pour les filières *ISI* (Informatique des Systèmes Informatiques) et *ME* (Management des Entreprises).
+StudyAll est une plateforme de révision en ligne destinée aux étudiants de SupMTI. Elle regroupe des documents essentiels (cours, TD, TP, examens) pour les filières ISI(Informatique des Systèmes Informatiques) et ME (Management des Entreprises).
 
 ---
 
@@ -22,19 +19,7 @@
 
 ---
 
-Utilisation
-
-Choisissez votre filière : ISI ou ME
-
-Sélectionnez la matière
-
-Accédez aux documents classés par type
-
-
-
----
-
-Technologies utilisées
+## Technologies utilisées
 
 HTML5
 
@@ -45,8 +30,6 @@ JavaScript
 (MySQL bientot)
 
 Git & GitHub
-
-
 
 ---
 
